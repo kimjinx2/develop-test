@@ -24,6 +24,8 @@ body {
 }
 
 
+/* Grid 과제 */ 
+
 .title {
     font-family: "Pretendard-Bold";
     font-size: 32px;
@@ -36,11 +38,10 @@ body {
 }
 
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
     justify-content: center;
-    align-items: flex-start;
 
     max-width: 1248px;
     margin: 40px auto;
@@ -49,13 +50,10 @@ body {
 }
 
 article.card {
-    flex: 1 1 300px;
-    min-width: 300px;
-    max-width: 400px;
-
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
     overflow: hidden;
 }
 
